@@ -1,6 +1,6 @@
 # Système de Surveillance Active de la Pollution de l'Air avec Alerte Intelligente par Email
 
-**Projet de Fin de Semestre** — Master *Informatique, Gouvernance et Transformation Digitale*, Département Informatique, Faculté des Sciences de Rabat, Université Mohammed V (année universitaire 2025-2026).
+Master *Informatique, Gouvernance et Transformation Digitale*, Université Mohammed V (année universitaire 2025-2026).
 
 Réalisé par **Nirmine Hiani** et **Hajar Chahbi**, encadré par **Mme Sara Diouani**.
 
