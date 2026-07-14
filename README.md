@@ -2,8 +2,6 @@
 
 Master *Informatique, Gouvernance et Transformation Digitale*, Université Mohammed V (année universitaire 2025-2026).
 
-Réalisé par **Nirmine Hiani** et **Hajar Chahbi**, encadré par **Mme Sara Diouani**.
-
 ## Contexte et problématique
 
 Avec l'évolution du cloud computing et la généralisation des applications web, la gestion de données environnementales en temps réel est devenue un enjeu clé, notamment pour la pollution atmosphérique, qui impacte directement la santé publique dans les grandes villes. Les données de qualité de l'air existent (via des API météo/environnementales) mais restent souvent dispersées, peu exploitées et difficiles d'accès pour les utilisateurs finaux.
@@ -99,3 +97,5 @@ Ce projet a permis de concevoir et déployer une solution complète de surveilla
 ## Licence
 
 `pollution dashboard/` est basé sur le template Black Dashboard, sous licence MIT — voir [LICENSE.md](pollution%20dashboard/LICENSE.md).
+
+Réalisé par **Nirmine Hiani** et **Hajar Chahbi**, encadré par **Mme Sara Diouani**.
