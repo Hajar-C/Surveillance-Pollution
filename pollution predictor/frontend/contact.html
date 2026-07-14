@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact / Désinscription</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Fonts + Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/loader.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <i class="fa-solid fa-wind"></i>
+      <span class="brand">Pollution Predictor</span>
+    </div>
+    <nav class="nav-links">
+      <a href="home.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+      <a class="active" href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+      <a href="index.html"><i class="fa-solid fa-user-plus"></i> Inscription</a>
+    </nav>
+  </header>
+
+  <main class="container fade-in">
+    <section class="card narrow">
+      <div class="card-header">
+        <h2>Contact / Désinscription</h2>
+        <p class="subtitle">Écrivez-nous ou désinscrivez-vous des alertes</p>
+      </div>
+
+      <form id="contactForm" class="form">
+        <label class="label" for="contactName">Nom</label>
+        <input class="input" type="text" id="contactName" placeholder="Votre nom" required />
+
+        <label class="label" for="contactEmail">Email</label>
+        <input class="input" type="email" id="contactEmail" placeholder="Votre email" required />
+
+        <label class="label" for="contactAction">Action</label>
+        <select class="input" id="contactAction">
+          <option value="message">Envoyer un message</option>
+          <option value="unsubscribe">Se désabonner</option>
+        </select>
+
+        <label class="label" for="contactMessage">Message</label>
+        <textarea class="input textarea" id="contactMessage" placeholder="Votre message (obligatoire si message)"></textarea>
+
+        <button type="submit" class="btn primary">
+          <i class="fa-solid fa-paper-plane"></i>
+          Envoyer
+        </button>
+      </form>
+
+      <!-- Toasts -->
+      <div id="toast" class="toast"></div>
+    </section>
+  </main>
+
+  <!-- Loader (injected) -->
+  <div id="loader-root"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

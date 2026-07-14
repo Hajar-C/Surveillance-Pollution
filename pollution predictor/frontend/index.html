@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Inscription – Pollution Predictor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Fonts + Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/loader.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <i class="fa-solid fa-wind"></i>
+      <span class="brand">Pollution Predictor</span>
+    </div>
+    <nav class="nav-links">
+      <a href="home.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+      <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+      <a class="active" href="index.html"><i class="fa-solid fa-user-plus"></i> Inscription</a>
+    </nav>
+  </header>
+
+  <main class="container fade-in">
+    <section class="card narrow">
+      <div class="card-header">
+        <h2>Inscription aux alertes de pollution</h2>
+        <p class="subtitle">Recevez des notifications pour votre ville au Maroc</p>
+      </div>
+
+      <form id="signupForm" class="form">
+        <label class="label" for="name">Nom</label>
+        <input class="input" type="text" id="name" placeholder="Votre nom" required />
+
+        <label class="label" for="email">Email</label>
+        <input class="input" type="email" id="email" placeholder="Votre email" required />
+
+        <label class="label" for="city">Ville (Maroc)</label>
+        <input class="input" type="text" id="city" placeholder="Ex: rabat, casablanca, meknes..." required />
+
+        <button type="submit" class="btn primary">
+          <i class="fa-solid fa-user-check"></i>
+          S’inscrire
+        </button>
+      </form>
+
+      <!-- Toasts -->
+      <div id="toast" class="toast"></div>
+    </section>
+  </main>
+
+  <!-- Loader (injected) -->
+  <div id="loader-root"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- ⚠️ Correction : charger inscription.js -->
+  <script src="js/inscription.js"></script>
+</body>
+</html>

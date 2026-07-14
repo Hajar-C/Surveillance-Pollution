@@ -1,0 +1,33 @@
+/* Full-screen loader overlay */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: none; /* hidden by default */
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+/* Spinner */
+.loader-spinner {
+  width: 58px;
+  height: 58px;
+  border: 6px solid rgba(255, 255, 255, 0.25);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Text */
+.loader-text {
+  color: #fff;
+  margin-top: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-align: center;
+}

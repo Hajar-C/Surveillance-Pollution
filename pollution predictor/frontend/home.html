@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard Qualité de l'air</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Fonts + Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Leaflet CSS (OBLIGATOIRE) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/loader.css" />
+
+  <!-- 🔴 IMPORTANT : hauteur de la carte -->
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-left">
+      <i class="fa-solid fa-wind"></i>
+      <span class="brand">Pollution Predictor</span>
+    </div>
+    <nav class="nav-links">
+      <a class="active" href="home.html">
+        <i class="fa-solid fa-chart-line"></i> Dashboard
+      </a>
+      <a href="contact.html">
+        <i class="fa-solid fa-envelope"></i> Contact
+      </a>
+      <a href="index.html">
+        <i class="fa-solid fa-user-plus"></i> Inscription
+      </a>
+    </nav>
+  </header>
+
+  <!-- CONTENU -->
+  <main class="container fade-in">
+
+    <h2 style="text-align:center; margin-bottom:20px;">
+      Dashboard Qualité de l'air
+    </h2>
+
+    <!-- Recherche -->
+    <div class="card">
+      <input
+        type="text"
+        id="searchCity"
+        class="input"
+        placeholder="Ville (Maroc) : Rabat, Casablanca, Fès..."
+      />
+      <button id="btnPollution" class="btn primary" style="margin-top:10px;">
+        <i class="fa-solid fa-cloud"></i> Collecter la pollution
+      </button>
+
+      <!-- Résultat -->
+      <div id="result" style="margin-top:15px;">
+        Clique sur le bouton ou sur la carte
+      </div>
+    </div>
+
+    <!-- Carte -->
+    <div id="map"></div>
+
+    <!-- Historique -->
+    <h3 style="margin-top:30px;">Historique de la qualité de l’air</h3>
+    <canvas id="pollutionChart" height="120"></canvas>
+
+    <!-- Toasts -->
+    <div id="toast" class="toast"></div>
+
+  </main>
+
+  <!-- Loader -->
+  <div id="loader-root"></div>
+
+  <!-- ================= SCRIPTS (ORDRE CRITIQUE) ================= -->
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- TON JS -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

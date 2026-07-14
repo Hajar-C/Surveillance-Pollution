@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.DS_Store
+
+# Local secrets - copy config.example.js to config.js and fill in your own key
+pollution dashboard/assets/js/config.js
